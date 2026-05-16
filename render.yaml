@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: madd-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt && python download_models.py
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: MAJOR_MODEL_GDRIVE_ID
+        value: ""  # ← ضعي هنا ID ملف Google Drive بعد الرفع
+    healthCheckPath: /health

@@ -1,0 +1,17 @@
+serviceAccountKey.json
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.vscode/
+
+*.joblib
+*.safetensors
+*.part
+*.crdownload
+*.zip
+
+# ملفات النماذج المدرَّبة الكبيرة — لا تُرفع للريبو
+# النموذج الكبير فقط (268MB) — يُحمَّل تلقائياً من Google Drive عند التشغيل
+backend/models/major_model.pkl
